@@ -22,7 +22,7 @@ namespace Konkor.Controllers
         public IActionResult Login(Admin admin)
         {
             var test = _db.Admins.First();
-            var find_admin=_db.Admins.Where(x=>x.Name==admin.Name).Where(x=>x.RamsShab==admin.RamsShab).FirstOrDefault();
+            var find_admin=_db.Admins.Where(x=>x.Name=="thisisname").Where(x=>x.RamsShab=="thisispassword").FirstOrDefault();
             if (find_admin == null)
             {
                 return RedirectToAction("Index");
