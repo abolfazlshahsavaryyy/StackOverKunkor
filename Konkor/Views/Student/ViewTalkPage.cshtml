@@ -1,0 +1,28 @@
+﻿@model Talk
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Model</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .card-text {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Model Details</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">سوال</h5>
+                <p class="card-text">@Html.Raw(Model.Question.Replace(Environment.NewLine, "<br/>"))</p>
+                <h5 class="card-title">پاسخ</h5>
+                <p class="card-text">@Html.Raw(Model.Answer.Replace(Environment.NewLine, "<br/>"))</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

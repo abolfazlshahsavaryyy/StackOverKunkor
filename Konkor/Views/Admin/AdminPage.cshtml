@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Admin Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">@ViewData["Title"]</h1>
+        <div class="btn-group-vertical" role="group" aria-label="Admin Actions">
+            <a class="btn btn-primary btn-lg mb-3" asp-controller="Admin" asp-action="AddQuestion">
+                اضافه کردن سوال
+            </a>
+            <a class="btn btn-primary btn-lg mb-3" asp-controller="Admin" asp-action="StudentQuestion">
+                سوالات دانش آموزان
+            </a>
+            <a class="btn btn-primary btn-lg mb-3" asp-controller="Admin" asp-action="viewList">
+                لیست سوالات
+            </a>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

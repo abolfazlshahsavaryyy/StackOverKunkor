@@ -1,0 +1,58 @@
+﻿@{
+    // Ensure your model is correctly populated
+    var model = Model as List<Talk>;
+}
+
+@model List<Talk>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Table</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    
+
+    <form asp-action="Search" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control" id="inputString" name="searchcontent" placeholder="search" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div class="container mt-5">
+        <h2 class="mb-4">لیست سوالات</h2>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>سوال</th>
+                    <th>پاسخ</th>
+                    <th>عملیات</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Question</td>
+                        <td>@item.Answer</td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" asp-controller="Student" asp-action="See" asp-route-id="@item.Id">بازدید</a>
+                            
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Include Bootstrap JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

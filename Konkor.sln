@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konkor", "Konkor\Konkor.csproj", "{21F12643-AC4F-432C-9BE5-1C78486A7447}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21F12643-AC4F-432C-9BE5-1C78486A7447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21F12643-AC4F-432C-9BE5-1C78486A7447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21F12643-AC4F-432C-9BE5-1C78486A7447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21F12643-AC4F-432C-9BE5-1C78486A7447}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1FE1001-E02D-4D6F-A375-E17FDE9F6E3A}
+	EndGlobalSection
+EndGlobal
